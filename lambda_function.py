@@ -40,7 +40,7 @@ def lambda_handler(event, context):
       try:
         ingest.send(
           gauges=[{
-            'metric': 'portal.servicedesk.iris.ss',
+            'metric': 'monitor.iris.ss',
             'value': superservercheck,
             'timestamp': time.time() * 1000,
             'dimensions': {
@@ -77,7 +77,7 @@ def lambda_handler(event, context):
       try:
         ingest.send(
           gauges=[{
-            'metric': 'portal.servicedesk.web.httpd',
+            'metric': 'monitor.web.httpd',
             'value': webservercheck,
             'timestamp': time.time() * 1000,
             'dimensions': {
